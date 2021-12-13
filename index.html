@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <title>CurrencySwitch</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/style.css">
+    </head>
+
+    <body>
+        <main>
+            <div class="container">
+                <h1>Currency<span>Switch</span></h1>
+
+                <div class="currencies">
+                    <button class="dollar" onclick="switchUSD()">
+                        <h2>dollar</h2>
+                    </button>
+
+                    <button class="euro" onclick="switchEUR()">
+                        <h2>euro</h2>
+                    </button>
+                    
+                    <div class="indicator"></div>
+                </div>
+
+                <div class="conversion">
+                    <input id="USD" type="number" placeholder="$0.00" oninput="convertUSD(this.value)">
+                    <input id="EUR" type="number" placeholder="€0.00" oninput="convertEUR(this.value)">
+                    <span>=</span>
+                    <p id="convertedUSD">R$0,00</p>
+                    <p id="convertedEUR">R$0,00</p>
+                </div>
+            </div>
+        </main>
+
+        <script src="./scripts/convert.js"></script>
+        <script src="./scripts/switch.js"></script>
+    </body>
+</html>
